@@ -1,0 +1,1 @@
+docker-compose -p service_management_customer up -d

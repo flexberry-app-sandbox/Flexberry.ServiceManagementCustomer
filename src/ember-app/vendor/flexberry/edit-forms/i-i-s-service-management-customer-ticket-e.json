@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Customer",
+      "projection": "CustomerL",
+      "detailModelName": null
+    },
+    {
+      "master": "event",
+      "displayAttributeName": "startTime",
+      "required": true,
+      "relationName": "TicketPosition.Event",
+      "projection": "EventL",
+      "detailModelName": "i-i-s-service-management-customer-ticket-position"
+    }
+  ],
+  "external": false,
+  "caption": "Ticket",
+  "name": "IISService_Management_CustomerTicketE",
+  "className": "TicketE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-ticket",
+      "modelProjection": "TicketE"
+    }
+  ]
+}

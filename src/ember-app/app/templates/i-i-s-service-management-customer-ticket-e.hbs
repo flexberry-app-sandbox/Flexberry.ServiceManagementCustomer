@@ -1,0 +1,70 @@
+<h3 class="ui header">{{t "forms.i-i-s-service-management-customer-ticket-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-service-management-customer-ticket-e.ticketDate-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.ticketDate
+      class=(if (v-get validationModel "ticketDate" "isInvalid") "error")
+      data-test-i-i-s-service-management-customer-ticket-e-ticketDate=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ticketDate" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-service-management-customer-ticket-e.customer-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.customer
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="customer"
+      projection="CustomerL"
+      title=(t "forms.i-i-s-service-management-customer-ticket-e.customer-caption")
+      readonly=readonly
+      componentName="customerLookup"
+      class=(if (v-get validationModel "customer" "isInvalid") "error")
+      data-test-i-i-s-service-management-customer-ticket-e-customer=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "customer" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-service-management-customer-ticket-e.ticketPosition-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="ticketPositionGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.ticketPosition
+      content=model.ticketPosition
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "ticketPosition" "isInvalid") "error")
+      data-test-i-i-s-service-management-customer-ticket-e-ticketPosition=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ticketPosition" "message")}}
+  </div>
+</form>

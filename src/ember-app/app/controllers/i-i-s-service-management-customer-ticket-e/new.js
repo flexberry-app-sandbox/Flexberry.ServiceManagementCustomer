@@ -1,0 +1,4 @@
+import IISService_Management_CustomerTicketEController from '../i-i-s-service-management-customer-ticket-e';
+
+var IISService_Management_CustomerTicketENewController = IISService_Management_CustomerTicketEController;
+export default IISService_Management_CustomerTicketENewController;

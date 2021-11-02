@@ -1,0 +1,4 @@
+import IISService_Management_CustomerCustomerEController from '../i-i-s-service-management-customer-customer-e';
+
+var IISService_Management_CustomerCustomerENewController = IISService_Management_CustomerCustomerEController;
+export default IISService_Management_CustomerCustomerENewController;

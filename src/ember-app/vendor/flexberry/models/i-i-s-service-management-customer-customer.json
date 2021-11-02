@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISService_Management_CustomerCustomer",
+  "modelName": "i-i-s-service-management-customer-customer",
+  "className": "Customer",
+  "nameSpace": "IIS.Service_Management_Customer",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "surname",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "eMail",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "CustomerE",
+      "modelName": "i-i-s-service-management-customer-customer",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "surname",
+          "caption": "Surname",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "phone",
+          "caption": "Phone",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "eMail",
+          "caption": "E mail",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "CustomerL",
+      "modelName": "i-i-s-service-management-customer-customer",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "surname",
+          "caption": "Surname",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "phone",
+          "caption": "Phone",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "eMail",
+          "caption": "E mail",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

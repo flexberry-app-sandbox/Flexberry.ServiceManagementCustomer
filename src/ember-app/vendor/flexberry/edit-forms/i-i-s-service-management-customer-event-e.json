@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ServiceProvider",
+      "projection": "ServiceProviderL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Event",
+  "name": "IISService_Management_CustomerEventE",
+  "className": "EventE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-event",
+      "modelProjection": "EventE"
+    }
+  ]
+}

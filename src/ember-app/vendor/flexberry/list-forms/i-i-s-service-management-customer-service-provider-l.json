@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-service-management-customer-service-provider-e",
+  "editForm": "i-i-s-service-management-customer-service-provider-e",
+  "external": false,
+  "caption": "Service provider",
+  "name": "IISService_Management_CustomerServiceProviderL",
+  "className": "ServiceProviderL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-service-provider",
+      "modelProjection": "ServiceProviderL"
+    }
+  ]
+}

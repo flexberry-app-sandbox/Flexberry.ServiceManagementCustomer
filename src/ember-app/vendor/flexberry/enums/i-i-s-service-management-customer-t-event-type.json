@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "IIS.Service_Management_Customer",
+  "className": "tEventType",
+  "enumObjects": {
+    "Concert": "",
+    "Movie": "",
+    "Performance": ""
+  }
+}

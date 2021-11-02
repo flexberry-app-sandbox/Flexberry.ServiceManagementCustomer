@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-service-management-customer-ticket-e",
+  "editForm": "i-i-s-service-management-customer-ticket-e",
+  "external": false,
+  "caption": "Ticket",
+  "name": "IISService_Management_CustomerTicketL",
+  "className": "TicketL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-ticket",
+      "modelProjection": "TicketL"
+    }
+  ]
+}

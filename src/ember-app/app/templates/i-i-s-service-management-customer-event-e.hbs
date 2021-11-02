@@ -1,0 +1,96 @@
+<h3 class="ui header">{{t "forms.i-i-s-service-management-customer-event-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-service-management-customer-event-e.eventDate-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.eventDate
+      class=(if (v-get validationModel "eventDate" "isInvalid") "error")
+      data-test-i-i-s-service-management-customer-event-e-eventDate=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "eventDate" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-service-management-customer-event-e-eventType="true">
+    <label>{{t "forms.i-i-s-service-management-customer-event-e.eventType-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-service-management-customer-t-event-type")
+      value=model.eventType
+      class=(if (v-get validationModel "eventType" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "eventType" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.startTime
+      class=(if (v-get validationModel "startTime" "isInvalid") "error")
+      label=(t "forms.i-i-s-service-management-customer-event-e.startTime-caption")
+      data-test-i-i-s-service-management-customer-event-e-startTime=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "startTime" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.duration
+      class=(if (v-get validationModel "duration" "isInvalid") "error")
+      label=(t "forms.i-i-s-service-management-customer-event-e.duration-caption")
+      data-test-i-i-s-service-management-customer-event-e-duration=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "duration" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.description
+      class=(if (v-get validationModel "description" "isInvalid") "error")
+      label=(t "forms.i-i-s-service-management-customer-event-e.description-caption")
+      data-test-i-i-s-service-management-customer-event-e-description=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "description" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-service-management-customer-event-e.serviceProvider-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.serviceProvider
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="serviceProvider"
+      projection="ServiceProviderL"
+      title=(t "forms.i-i-s-service-management-customer-event-e.serviceProvider-caption")
+      readonly=readonly
+      componentName="serviceProviderLookup"
+      class=(if (v-get validationModel "serviceProvider" "isInvalid") "error")
+      data-test-i-i-s-service-management-customer-event-e-serviceProvider=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "serviceProvider" "message")}}
+  </div>
+</form>

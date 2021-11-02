@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-service-management-customer-event-e",
+  "editForm": "i-i-s-service-management-customer-event-e",
+  "external": false,
+  "caption": "Event",
+  "name": "IISService_Management_CustomerEventL",
+  "className": "EventL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-event",
+      "modelProjection": "EventL"
+    }
+  ]
+}

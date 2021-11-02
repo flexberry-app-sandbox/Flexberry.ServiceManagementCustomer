@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-service-management-customer-feedback-e",
+  "editForm": "i-i-s-service-management-customer-feedback-e",
+  "external": false,
+  "caption": "Feedback",
+  "name": "IISService_Management_CustomerFeedbackL",
+  "className": "FeedbackL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-feedback",
+      "modelProjection": "FeedbackL"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+import IISService_Management_CustomerFeedbackEController from '../i-i-s-service-management-customer-feedback-e';
+
+var IISService_Management_CustomerFeedbackENewController = IISService_Management_CustomerFeedbackEController;
+export default IISService_Management_CustomerFeedbackENewController;

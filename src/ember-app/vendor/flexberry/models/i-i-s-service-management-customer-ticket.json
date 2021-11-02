@@ -1,0 +1,120 @@
+﻿{
+  "name": "IISService_Management_CustomerTicket",
+  "modelName": "i-i-s-service-management-customer-ticket",
+  "className": "Ticket",
+  "nameSpace": "IIS.Service_Management_Customer",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "ticketDate",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "customer",
+      "relatedTo": "i-i-s-service-management-customer-customer",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "ticketPosition",
+      "relatedTo": "i-i-s-service-management-customer-ticket-position",
+      "inverse": "ticket"
+    }
+  ],
+  "projections": [
+    {
+      "name": "TicketE",
+      "modelName": "i-i-s-service-management-customer-ticket",
+      "attrs": [
+        {
+          "name": "ticketDate",
+          "caption": "Ticket date",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Customer",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Customer",
+          "name": "customer",
+          "relatedTo": "i-i-s-service-management-customer-customer",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "TicketPositionE",
+          "caption": "Ticket position",
+          "name": "ticketPosition",
+          "relatedTo": "i-i-s-service-management-customer-ticket-position",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "TicketL",
+      "modelName": "i-i-s-service-management-customer-ticket",
+      "attrs": [
+        {
+          "name": "ticketDate",
+          "caption": "Ticket date",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Customer",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "customer",
+          "relatedTo": "i-i-s-service-management-customer-customer",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

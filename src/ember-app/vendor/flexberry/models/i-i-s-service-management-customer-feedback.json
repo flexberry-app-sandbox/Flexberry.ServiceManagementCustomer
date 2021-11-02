@@ -1,0 +1,176 @@
+﻿{
+  "name": "IISService_Management_CustomerFeedback",
+  "modelName": "i-i-s-service-management-customer-feedback",
+  "className": "Feedback",
+  "nameSpace": "IIS.Service_Management_Customer",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "ranking",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "feedbackText",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "event",
+      "relatedTo": "i-i-s-service-management-customer-event",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "customer",
+      "relatedTo": "i-i-s-service-management-customer-customer",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "FeedbackE",
+      "modelName": "i-i-s-service-management-customer-feedback",
+      "attrs": [
+        {
+          "name": "ranking",
+          "caption": "Ranking",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "feedbackText",
+          "caption": "Feedback text",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "StartTime",
+          "lookupValueField": "startTime",
+          "relationName": "Event",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "startTime",
+              "caption": "Start time",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Event",
+          "name": "event",
+          "relatedTo": "i-i-s-service-management-customer-event",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Customer",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Customer",
+          "name": "customer",
+          "relatedTo": "i-i-s-service-management-customer-customer",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "FeedbackL",
+      "modelName": "i-i-s-service-management-customer-feedback",
+      "attrs": [
+        {
+          "name": "ranking",
+          "caption": "Ranking",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "feedbackText",
+          "caption": "Feedback text",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Event",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "startTime",
+              "caption": "Start time",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Start time",
+          "name": "event",
+          "relatedTo": "i-i-s-service-management-customer-event",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Customer",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "customer",
+          "relatedTo": "i-i-s-service-management-customer-customer",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

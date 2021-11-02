@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-service-management-customer-customer-e",
+  "editForm": "i-i-s-service-management-customer-customer-e",
+  "external": false,
+  "caption": "Customer",
+  "name": "IISService_Management_CustomerCustomerL",
+  "className": "CustomerL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-service-management-customer-customer",
+      "modelProjection": "CustomerL"
+    }
+  ]
+}
